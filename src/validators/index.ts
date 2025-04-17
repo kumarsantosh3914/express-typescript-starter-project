@@ -23,6 +23,11 @@ export const validateRequestBody = (schema: AnyZodObject): RequestHandler => {
     }
 }
 
+/**
+ * 
+ * @param Schema - zod schema to validate the request query params
+ * @returns - Middleware function to validate the request query params
+ */
 export const validteQueryParams = (Schema: AnyZodObject) => {
     return async (req: Request, res: Response, next: NextFunction) => {
         try {
